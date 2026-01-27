@@ -1,0 +1,100 @@
+:root {
+  --primary-color: #4a9eff;
+  --primary-dark: #357abd;
+  --secondary-color: #7c3aed;
+  --accent-color: #e74c3c;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666;
+  --text-tertiary: #888;
+  --background-light: #fafafa;
+  --background-main: #ffffff;
+  --border-color: #ddd;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-primary: #ffffff;
+    --text-secondary: #999;
+    --text-tertiary: #666;
+    --background-light: #0d0d0d;
+    --background-main: #1a1a1a;
+    --border-color: #444;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--background-light);
+  color: var(--text-primary);
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+button {
+  outline: none;
+}
+
+textarea {
+  outline: none;
+}
+
+input {
+  outline: none;
+}
+
+/* Prevent zooming on input focus on mobile */
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+/* Fullscreen view handling */
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+/* Remove default scrollbar on mobile */
+html {
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* iOS specific */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+    padding-top: max(12px, env(safe-area-inset-top));
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+  }
+}

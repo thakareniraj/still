@@ -1,0 +1,471 @@
+.mental-declutter-module {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+  padding: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .mental-declutter-module {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+  }
+}
+
+.declutter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+}
+
+.instruction-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.instruction-icon {
+  font-size: 4rem;
+}
+
+.instruction-screen h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+@media (prefers-color-scheme: dark) {
+  .instruction-screen h2 {
+    color: #ffffff;
+  }
+}
+
+.instruction-subtitle {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+@media (prefers-color-scheme: dark) {
+  .instruction-subtitle {
+    color: #999;
+  }
+}
+
+.instruction-box {
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 16px 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .instruction-box {
+    background-color: #2a2a2a;
+  }
+}
+
+.instruction-box p {
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  .instruction-box p {
+    color: #ffffff;
+  }
+}
+
+.start-button {
+  padding: 12px 32px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .start-button {
+    background-color: #ffffff;
+    color: #1a1a1a;
+  }
+}
+
+.start-button:active {
+  transform: scale(0.98);
+}
+
+.dumping-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  gap: 16px;
+}
+
+.dumping-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.dumping-header h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dumping-header h3 {
+    color: #ffffff;
+  }
+}
+
+.dump-timer {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e74c3c;
+}
+
+.dumping-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.dump-textarea {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  resize: none;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dump-textarea {
+    background-color: #2a2a2a;
+    border-color: #444;
+    color: #ffffff;
+  }
+}
+
+.dump-textarea::placeholder {
+  color: #999;
+}
+
+.voice-button {
+  padding: 12px 20px;
+  border: 2px solid #e74c3c;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #e74c3c;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .voice-button {
+    background-color: transparent;
+    border-color: #c0392b;
+    color: #ff6b6b;
+  }
+}
+
+.voice-button:active {
+  transform: scale(0.98);
+}
+
+.voice-button.listening {
+  background-color: #e74c3c;
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(231, 76, 60, 0.5);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+  .voice-button.listening {
+    background-color: #c0392b;
+    color: #ffffff;
+    box-shadow: 0 0 16px rgba(192, 57, 43, 0.5);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.dumping-hint {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+  font-style: italic;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dumping-hint {
+    color: #999;
+  }
+}
+
+.intention-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  gap: 16px;
+}
+
+.intention-screen h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .intention-screen h3 {
+    color: #ffffff;
+  }
+}
+
+.intention-subtitle {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .intention-subtitle {
+    color: #999;
+  }
+}
+
+.intention-textarea {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  resize: none;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  min-height: 80px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .intention-textarea {
+    background-color: #2a2a2a;
+    border-color: #444;
+    color: #ffffff;
+  }
+}
+
+.intention-textarea::placeholder {
+  color: #999;
+}
+
+.intention-hint {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .intention-hint {
+    color: #999;
+  }
+}
+
+.submit-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e74c3c;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  .submit-button {
+    background-color: #c0392b;
+  }
+}
+
+.submit-button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.completion-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.completion-icon {
+  font-size: 3rem;
+}
+
+.completion-screen h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+@media (prefers-color-scheme: dark) {
+  .completion-screen h3 {
+    color: #ffffff;
+  }
+}
+
+.completion-box {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 12px 0;
+  width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  .completion-box {
+    background-color: #2a2a2a;
+  }
+}
+
+.completion-label {
+  font-size: 0.85rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .completion-label {
+    color: #999;
+  }
+}
+
+.intention-display {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  .intention-display {
+    color: #ffffff;
+  }
+}
+
+.completion-text {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  .completion-text {
+    color: #999;
+  }
+}
+
+.next-button {
+  padding: 12px 32px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .next-button {
+    background-color: #ffffff;
+    color: #1a1a1a;
+  }
+}
+
+.next-button:active {
+  transform: scale(0.98);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: #e0e0e0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  .progress-bar {
+    background-color: #333;
+  }
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #e74c3c 0%, #c0392b 100%);
+  transition: width 1s linear;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
